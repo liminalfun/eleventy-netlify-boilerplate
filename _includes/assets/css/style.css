@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Amiamie";
+	src: 
+		url("/static/fonts/Amiamie-Regular.woff2"),
+		url("/_includes/assets/fonts/Amiamie-Regular.woff"),
+		url("_includes/assets/fonts/Amiamie-Regular.otf"),
+	font-display: swap;
+}
+
+body {
+	font-family: "Amiamie", serif, Helvetica, Arial, sans-serif;
+}

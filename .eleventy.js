@@ -6,6 +6,12 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
 
+  // // Setup BrowserSync and Sass
+  // // Reference: https://jkc.codes/blog/using-sass-with-eleventy/
+  // eleventyConfig.setBrowserSyncConfig({
+	// 	files: './_site/css/**/*.css'
+	// });
+
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
@@ -75,7 +81,8 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
-  // Don't process folders with static assets e.g. images
+  // Don't process folders with static assets e.g. images, fonts
+  eleventyConfig.addPassthroughCopy("static/fonts");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("static/img");
   eleventyConfig.addPassthroughCopy("admin/");
